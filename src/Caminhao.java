@@ -15,8 +15,8 @@ public class Caminhao extends Veiculos{
     }
 
     @Override
-    public String toString() {
-        return super.toString()+"/n"+
+    public String exibir_info() {
+        return super.exibir_info()+
                 "capacidade_carga=" + capacidade_carga;
     }
 }

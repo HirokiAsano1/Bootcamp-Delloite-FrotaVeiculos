@@ -15,8 +15,8 @@ public class Carro extends Veiculos {
     }
 
     @Override
-    public String toString() {
-        return super.toString() +"\n"+
+    public String exibir_info() {
+        return super.exibir_info() +"\n"+
                 "num_portas=" + num_portas;
     }
 }

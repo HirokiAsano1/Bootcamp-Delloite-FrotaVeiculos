@@ -58,15 +58,17 @@ public class Veiculos {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Veiculos{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", ano=" + ano +
-                ", velocidade=" + velocidade +
-                '}';
+
+    public String exibir_info() {
+        return "Veiculo:" + "\n" +
+                "marca= " + marca + "\n" +
+                 "modelo= " + modelo + "\n" +
+                "ano= " + ano + "\n" +
+                "velocidade= " + velocidade + "\n"
+                ;
     }
+
+
 
 
 }

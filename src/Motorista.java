@@ -43,11 +43,15 @@ public class Motorista {
         this.veiculo_atual= null;
     }
 
-    public String dirigir()
+    public void dirigir()
     {
         if(this.veiculo_atual != null){
-            return this.nome +" esta dirigindo um" + this.veiculo_atual.getModelo();
+            System.out.println(this.nome +" esta dirigindo um : " + this.veiculo_atual.exibir_info());
         }
-        return this.nome +" não esta dirigindo um veiculo";
+        else
+        {
+            System.out.println(this.nome +" não esta dirigindo um veiculo");
+        }
+
     }
 }

@@ -2,14 +2,28 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Veiculos veiculo = new Veiculos("Marcateste","modeloteste",2010);
+        veiculo.acelerar();
+        veiculo.acelerar();
+        veiculo.frear();
+        System.out.println(veiculo.exibir_info());
+        System.out.println();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Caminhao caminhao = new Caminhao("marca teste2", "modeloteste2",2020,24);
+        caminhao.acelerar();
+        System.out.println(caminhao.exibir_info());
+        System.out.println();
+
+        Motorista motorista = new Motorista("Pedro","1221838");
+        motorista.atribuir_veiculo(caminhao);
+        motorista.dirigir();
+        System.out.println();
+
+
+        Frota frota = new Frota();
+        frota.adicionar_motoristas(motorista);
+        frota.adicionar_veiculo(caminhao);
+        frota.adicionar_veiculo(veiculo);
+        frota.Listar();
     }
 }
